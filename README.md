@@ -7,4 +7,4 @@ Use TamperMonkey plugin in Chrome or Firefox to run this script on your Webbrows
 [TamperMonkey in Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
 
 #### Download 
-https://github.com/micovo/fotbalunasVoter/raw/master/fotbalunasVoter.user.js
+https://github.com/dave-cz/fotbalunasVoter/raw/master/fotbalunasVoter.user.js
