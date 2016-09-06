@@ -21,7 +21,7 @@
         hracId: null,
         sestavaId: null,
         worker: null,
-        sched: later.parse.text('every 1 h'),
+        sched: later.parse.text('every 10 min'),
         klub: true
     };
 
@@ -81,8 +81,6 @@
             var res = JSON.parse(response);
             if (res.success) {
                 $('#votingStatus').text('Naposled úspěšně zahlasováno: '+new Date().toLocaleFormat());
-            } else {
-                $('#votingStatus').text('Něco selhalo, zkus obnovit stránku.');
             }
         }).fail(function (jqXHR, textStatus, errorThrown){
 
