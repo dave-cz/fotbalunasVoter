@@ -21,7 +21,7 @@
         hracId: null,
         sestavaId: null,
         worker: null,
-        sched: later.parse.text('every 3605 s'),
+        sched: later.parse.text('every 1 h'),
         klub: true
     };
 
