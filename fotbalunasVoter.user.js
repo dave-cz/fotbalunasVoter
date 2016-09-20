@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fotbalunas Hrac Kola
 // @namespace    Fotbalunas Hrac Kola
-// @version      0.1.1
+// @version      0.1.2
 // @description  try to take over the world!
 // @namespace    https://github.com/dave-cz/fotbalunasVoter/
 // @downloadURL  https://raw.githubusercontent.com/dave-cz/fotbalunasVoter/master/fotbalunasVoter.user.js
@@ -55,7 +55,7 @@
     sks.startWorker = function () {
         var self = this; // self === sks
         this.worker = later.setInterval(function () {
-            console.log('worker: '+new Date().toLocaleString());
+            //console.log('worker: '+new Date().toLocaleString());
             self.vote();
         }, this.sched);
     };
@@ -73,7 +73,7 @@
     sks.vote = function() {
         var self = this;
         $.ajax({
-            url: 'http://fotbalunas.cz/hlasuj-pro-hrace-kola/',
+            url: window.location.href.split('sestava-kola')[0]+'hlasuj-pro-hrace-kola/',
             type: 'post',
             data: {
                 'hrac-id': self.hracId,
@@ -81,7 +81,7 @@
             }
         }).done(function (response, textStatus, jqXHR){
             var res = JSON.parse(response);
-            console.log('vote done: '+new Date().toLocaleString());
+            //console.log('vote done: '+new Date().toLocaleString());
             if (res.success) {
                 $('#votingStatus').text('Naposled úspěšně zahlasováno: '+new Date().toLocaleFormat());
             }
