@@ -8,6 +8,7 @@
 // @updateURL    https://raw.githubusercontent.com/dave-cz/fotbalunasVoter/master/fotbalunasVoter.user.js
 // @author       https://github.com/dave-cz
 // @match        http://fotbalunas.cz/sestava-kola/*
+// @match        http://www.fotbalunas.cz/sestava-kola/*
 // @require      http://code.jquery.com/jquery-latest.min.js
 // @require      https://raw.githubusercontent.com/bunkat/later/master/later.min.js
 // @run-at       document-end
@@ -31,7 +32,7 @@
 
     $('#votingCheckbox').click(function() {
         sks.enableVoting = $(this).is(':checked');
-        if (sks.enableVoting && sks.hracId) {
+        if (sks.enableVoting && sks.hracId && sks.klub) {
             sks.startWorker();
         } else {
             sks.stopWorker();
@@ -54,6 +55,7 @@
     sks.startWorker = function () {
         var self = this; // self === sks
         this.worker = later.setInterval(function () {
+            console.log('worker: '+new Date().toLocaleString());
             self.vote();
         }, this.sched);
     };
@@ -79,6 +81,7 @@
             }
         }).done(function (response, textStatus, jqXHR){
             var res = JSON.parse(response);
+            console.log('vote done: '+new Date().toLocaleString());
             if (res.success) {
                 $('#votingStatus').text('Naposled úspěšně zahlasováno: '+new Date().toLocaleFormat());
             }
