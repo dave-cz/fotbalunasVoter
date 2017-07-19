@@ -28,7 +28,7 @@
 
     $('h4.text-center').append('<br/><br/><input id="votingCheckbox" type="checkbox" name="enableVoting" value="1" checked>'+
         '&nbsp;&nbsp;<span style="color:red;">Kliknutím na hráče zapnout automatické hlasování po hodině.</span><br/>'+
-        'Funguje pouze pro přihlášené uživatele.<br/><br/><strong>Status:</strong> <span id="votingStatus" style="color:blue;"></span>');
+        'Funguje pouze pro <a href="http://fotbalunas.cz/registrovana-sekce/">přihlášené uživatele</a>.<br/><br/><strong>Status:</strong> <span id="votingStatus" style="color:blue;"></span>');
 
     $('#votingCheckbox').click(function() {
         sks.enableVoting = $(this).is(':checked');
