@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fotbalunas Hrac Kola
 // @namespace    Fotbalunas Hrac Kola
-// @version      0.1.2
+// @version      0.1.3
 // @description  try to take over the world!
 // @namespace    https://github.com/dave-cz/fotbalunasVoter/
 // @downloadURL  https://raw.githubusercontent.com/dave-cz/fotbalunasVoter/master/fotbalunasVoter.user.js
