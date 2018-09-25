@@ -7,8 +7,8 @@
 // @downloadURL  https://raw.githubusercontent.com/dave-cz/fotbalunasVoter/master/fotbalunasVoter.user.js
 // @updateURL    https://raw.githubusercontent.com/dave-cz/fotbalunasVoter/master/fotbalunasVoter.user.js
 // @author       https://github.com/dave-cz
-// @match        http://fotbalunas.cz/sestava-kola/*
-// @match        http://www.fotbalunas.cz/sestava-kola/*
+// @match        http*://fotbalunas.cz/sestava-kola/*
+// @match        http*://www.fotbalunas.cz/sestava-kola/*
 // @require      http://code.jquery.com/jquery-latest.min.js
 // @require      https://raw.githubusercontent.com/bunkat/later/master/later.min.js
 // @run-at       document-end
